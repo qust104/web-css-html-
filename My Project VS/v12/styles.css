@@ -5,7 +5,6 @@
     box-sizing: border-box;
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
-    font-weight: weight;
     font-style: normal;
 }
 html{
@@ -122,6 +121,7 @@ body {
     gap: 20px; /* Расстояние между main-content и sidebar */
     margin: 20px auto;
     max-width: 1200px;
+    margin-bottom: 0;
 }
 
 /* Main Content */
@@ -132,6 +132,7 @@ body {
     background-color: #f4f4f4;
     margin-top: 0;
     padding-top: 0;
+    margin-bottom: 0;
 }
 
 /* 1. Рекламный баннер */
@@ -399,30 +400,63 @@ body {
 
 
 .sidebar__categories-pages{
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
     list-style: none;
+    flex-grow: 1
 }
 .sidebar__categories{
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    margin: 4px;
+    height: 230px;
 }
 .sidebar__site-pages{
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    margin: 4px;
 }
-.sidebar__pages-button{
-
+.sidebar__pages-title{
+    background-color: #000;
+    color: #fff;
+    padding-left: 10px;
 }
-
+.sidebar__pages-button {
+    padding: 15px;
+    font-size: 18px;
+}
+.sidebar__ads{
+    display: flex;
+    background-color: #fff;
+    height: 160px;
+    justify-content: space-evenly;
+    margin: 45px 5px;
+    border: 1px solid #b9b9b9;
+}
+.wootheme1{
+    padding: 15px;
+}
+.wootheme2{
+    background-color: #498bee;
+    margin: 15px;
+    border: 1px solid #b9b9b9;
+}
 /* Sidebar - Videos */
 .sidebar__videos {
-    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
 }
 
 .sidebar__videos-title {
-    font-size: 18px;
+    font-size: 26px;
     margin-bottom: 10px;
+    background-color: #000;
+    color: white;
+    padding: 0 10px;
+
 }
 
 .video-player {
@@ -433,19 +467,25 @@ body {
 .video-player__thumbnail {
     width: 100%;
     height: auto;
-    display: block;
+    padding: 5px;
+    
 }
 /* Миниатюры видео */
+
+.vidiopp{
+    font-weight: bold;
+    font-size: 20px;
+}
 .sidebar__videos-thumbnails {
     list-style: none;
     display: flex;
     gap: 10px; /* Расстояние между миниатюрами */
-    padding: 0;
-    margin: 0;
 }
 
 .sidebar__videos-item {
-    flex: 1; /* Равномерное распределение по ширине */
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #cacaca ;
 }
 
 .sidebar__videos-thumbnail {
@@ -461,14 +501,19 @@ body {
 }
 /* Footer */
 .footer {
-    background-color: #fff;
+    width: 100vw;
+    margin-left: -20px;
+    margin-bottom: -20px;
+    background-color: #000000;
     text-align: center;
+    display: flex;
+    justify-content: center;
     padding: 10px;
 }
 
 .footer__copyright {
     font-size: 14px;
-    color: #666;
+    color: #ffffff;
 }
 
 a:hover{
