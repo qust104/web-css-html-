@@ -291,7 +291,7 @@ body {
 /* Sidebar */
 .sidebar {
     flex: 1; /* Занимает 1 часть ширины */
-    background-color: #fff;
+    background-color: #f4f4f4;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -347,9 +347,61 @@ body {
     font-size: 12px;
     color: #666;
 }
+.sidebar__popular{
+    background-color: #fff;
+}
+.sidebar__popular-nav-list{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    background-color: #000;
+    align-items: center;
+    font-weight: bold;
+}
+.sidebar__popular-title{
+    margin: 5px 10px;
+}
+.sidebar__popular-title a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.sidebar__popular-title-first a{
+    color: #000000;
+    background-color: #fff;
+    text-decoration: none;
+}
+.sidebar__popular-title-second a{
+    color: #ffffff;
+    
+}
+.sidebar__popular-list{
+    list-style: none;
+}
+.sidebar__popular-thumbnail{
+    width: 55px;
+    height: 55px;
+    padding: 5px;
+    border: 1px solid #f4f4f4;
+}
+.sidebar__popular-text {
+    font-weight: bold;
+
+}
+.sidebar__popular-text-str{
+    display: flex;
+}
+.sidebar__popular-text-plus{
+    margin: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+
+
 .sidebar__categories-pages{
     display: flex;
     justify-content: space-between;
+    list-style: none;
 }
 /* Sidebar - Videos */
 .sidebar__videos {
