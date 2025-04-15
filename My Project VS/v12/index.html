@@ -133,8 +133,8 @@
         <!-- Sidebar -->
         <aside class="sidebar">
             <section class="sidebar__search">
-                <input type="text" placeholder="Enter search..." class="sidebar__search-input">
-                <button class="sidebar__search-button">SEARCH</button>
+                <input type="search" placeholder="Enter search..." class="sidebar__search-input">
+                <button type = 'bs'class="sidebar__search-button">SEARCH</button>
             </section>
 
             <section class="sidebar__social">
@@ -156,11 +156,11 @@
 
             <section class="sidebar__popular">
                 <nav class="sidebar__popular-nav">
-                    <ul class="sidebar__popular-nav-list">
-                        <li class="sidebar__popular-title-first"><a href="#"> POPULAR</a></li>
-                        <li class="sidebar__popular-title-second"><a href="#"> LASTEST</a></li>
-                        <li class="sidebar__popular-title"><a href="#"> COMMENTS</a></li>
-                    </ul>
+        
+                    <button class="sidebar__popular-title">POPULAR</button>
+                    <button class="sidebar__popular-title">LASTEST</button>
+                    <button class="sidebar__popular-title">COMMENTS</button>
+                  
                 </nav>    
                 <ul class="sidebar__popular-list">
                     <li class="sidebar__popular-item">
@@ -181,27 +181,23 @@
             </section>
             <div class="sidebar__categories-pages">
                 <section class="sidebar__categories">
-                    <h3 class="sidebar__categories-title">Categories</h3>
-                    <ul class="sidebar__categories-list">
-                        <li class="sidebar__categories-item"><a href="#" class="sidebar__categories-link">Interview</a></li>
-                        <li class="sidebar__categories-item"><a href="#" class="sidebar__categories-link">Technology</a></li>
-                        <li class="sidebar__categories-item"><a href="#" class="sidebar__categories-link">Inspiration</a></li>
-                        <li class="sidebar__categories-item"><a href="#" class="sidebar__categories-link">Photography</a></li>
-                    </ul>
+                    <h3 class="sidebar__pages-title">Categories</h3>
+                        <button class="sidebar__pages-button">Intreview</button>
+                        <button class="sidebar__pages-button">Technology</button>
+                        <button class="sidebar__pages-button">Inspiration</button>
+                        <button class="sidebar__pages-button">Photography</button>
                 </section>
 
                 <section class="sidebar__site-pages">
-                    <h3 class="sidebar__site-pages-title">Site Pages</h3>
-                    <ul class="sidebar__site-pages-list">
-                        <li class="sidebar__site-pages-item"><a href="#" class="sidebar__site-pages-link">Home</a></li>
-                        <li class="sidebar__site-pages-item"><a href="#" class="sidebar__site-pages-link">About</a></li>
-                        <li class="sidebar__site-pages-item"><a href="#" class="sidebar__site-pages-link">Archives</a></li>
-                        <li class="sidebar__site-pages-item"><a href="#" class="sidebar__site-pages-link">Contact us</a></li>
-                    </ul>
+                    <h3 class="sidebar__pages-title">Site Pages</h3>
+                    <button class="sidebar__pages-button">Home</button>
+                    <button class="sidebar__pages-button">About</button>
+                    <button class="sidebar__pages-button">Archives</button>
+                    <button class="sidebar__pages-button">Contact us</button>
                 </section>
             </div>
             <section class="sidebar__ads">
-                <img src="https://via.placeholder.com/300x250" alt="Advertisement" class="sidebar__ads-image">
+                
             </section>
 
             <section class="sidebar__videos">
@@ -234,4 +230,17 @@
         <p class="footer__copyright">&copy; 2023 WebSource. All rights reserved.</p>
     </footer>
 </body>
+<script>
+    const buttons = document.querySelectorAll('.sidebar__popular-title');
+
+// Добавляем обработчик события на каждую кнопку
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Удаляем класс 'active' у всех кнопок
+    buttons.forEach(btn => btn.classList.remove('active'));
+    // Добавляем класс 'active' к текущей кнопке
+    button.classList.add('active');
+  });
+});
+  </script>
 </html>
