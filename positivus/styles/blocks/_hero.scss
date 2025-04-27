@@ -8,6 +8,10 @@
         justify-content: space-between;
         align-items: start;
         column-gap: 30px;
+
+        @include mobile {
+            flex-direction: column;
+        }
     }
 
     &__body {
@@ -17,16 +21,56 @@
         row-gap: 35px;
         max-width: 531px;
         height: auto;
+
+        @include mobile {
+            display: contents;
+        }
+    }
+
+    &__title{
+        @include mobile {
+            order:-1
+        }
     }
 
     &__description {
         font-size: 20px;
         line-height: 1.4;
+
+        @include mobile{
+            margin-bottom: 40px;
+        }
     }
 
-    &__partners-list{
+    &__button{
+        @include mobile{
+            width: 100%;
+            max-width: 390px;
+            margin-inline: auto;
+        }
+    }
+
+    &__partners{
+
+        &__list{
         display: flex;
         justify-content: space-between;
-     
+        column-gap: 37px;
+        }
     }
+
+    &__image {
+        @include tablet{
+            min-width: 40%;
+            height: auto;
+           
+        @include mobile{
+            order: 1;
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }    
+        }
+    }
+
 }
