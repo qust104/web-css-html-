@@ -494,6 +494,11 @@ h4, .h4 {
   flex-direction: column;
   row-gap: var(--section-padding-y);
 }
+@media (max-width: 1280px) {
+  .hero {
+    row-gap: 60px;
+  }
+}
 .hero__main {
   display: flex;
   justify-content: space-between;
@@ -512,7 +517,6 @@ h4, .h4 {
   align-items: start;
   row-gap: 35px;
   max-width: 531px;
-  height: auto;
 }
 @media (max-width: 767px) {
   .hero__body {
@@ -521,7 +525,8 @@ h4, .h4 {
 }
 @media (max-width: 767px) {
   .hero__title {
-    order: -1;
+    order: -2;
+    margin-bottom: 10px;
   }
 }
 .hero__description {
@@ -540,11 +545,18 @@ h4, .h4 {
     margin-inline: auto;
   }
 }
-.hero__partners__list {
+.hero__partners-list {
   display: flex;
   justify-content: space-between;
   -moz-column-gap: 37px;
        column-gap: 37px;
+}
+@media (max-width: 1023px) {
+  .hero__partners-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+  }
 }
 @media (max-width: 1023px) {
   .hero__image {
@@ -552,9 +564,9 @@ h4, .h4 {
     height: auto;
   }
 }
-@media (max-width: 1023px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .hero__image {
-    order: 1;
+    order: -1;
     width: 100%;
     max-width: 100%;
     margin-bottom: 20px;
