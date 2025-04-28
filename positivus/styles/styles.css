@@ -559,6 +559,12 @@ h4, .h4 {
   }
 }
 @media (max-width: 1023px) {
+  .hero__partners-item {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 1023px) {
   .hero__image {
     min-width: 40%;
     height: auto;
